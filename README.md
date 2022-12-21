@@ -1,13 +1,27 @@
 # DeepKPG
 
 ## Introduction
-We provide support for a range of Deep Keyphrase Generation and Extraction methods with Pre-trained Language Models (PLMs). This repository contains the following models and methods mentioned in the paper TODO:
+We provide support for a range of Deep Keyphrase Generation and Extraction methods with Pre-trained Language Models (PLMs). This repository contains the following models and methods mentioned in the paper [Pre-trained Language Models for Keyphrase Generation: A Thorough Empirical Study](https://arxiv.org/abs/2212.10233). 
 
 - [Keyphrase Extraction with BERT-like encoder-only PLMs with or without CRF](#keyphrase-extraction-via-sequence-tagging).
 - [Keyphrase Generation with encoder-only PLMs following the BERT2BERT paradigm](#bert2bert).
 - [Keyphrase Generation with encoder-only PLMs following the UniLM (attention mask manipulation) paradigm](#unilm). 
 - [Keyphrase Generation with sequence-to-sequence PLMs such as BART and T5](#keyphrase-generation-with-sequence-to-sequence-plms).
 - Code and checkpoints for in-domain PLMs: [SciBART](#scibart), [NewsBART](#newsbart), and [NewsBERT](#newsbert).
+
+If you find this work helpful, please consider citing
+```
+@article{https://doi.org/10.48550/arxiv.2212.10233,
+  doi = {10.48550/ARXIV.2212.10233},
+  url = {https://arxiv.org/abs/2212.10233},
+  author = {Wu, Di and Ahmad, Wasi Uddin and Chang, Kai-Wei},
+  keywords = {Computation and Language (cs.CL), FOS: Computer and information sciences, FOS: Computer and information sciences},
+  title = {Pre-trained Language Models for Keyphrase Generation: A Thorough Empirical Study},
+  publisher = {arXiv},
+  year = {2022}, 
+  copyright = {Creative Commons Attribution 4.0 International}
+}
+```
 
 ## Getting Started
 This project requires a GPU environment with CUDA. We recommend following the steps below to use the project.
