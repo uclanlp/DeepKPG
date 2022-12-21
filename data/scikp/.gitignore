@@ -1,0 +1,3 @@
+# ignore the actual data files and folders
+*/
+*.zip

@@ -1,0 +1,7 @@
+# ignore the actual data files and folders
+*/
+*.zip
+*.jsonl
+*dict*.json
+*.py
+*.csv

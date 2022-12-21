@@ -1,0 +1,6 @@
+*.zip
+*.json
+processed/
+bioformat/
+fairseq/
+json/
