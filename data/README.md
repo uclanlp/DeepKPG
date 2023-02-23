@@ -49,6 +49,11 @@ After the preprocessing script finishes, the will be three folders.
 - Paper: https://www.aclweb.org/anthology/N19-1070/
 - Download data from: http://hdl.handle.net/11234/1-2943
 
+### LDKP
+
+- Paper: https://arxiv.org/pdf/2203.15349.pdf
+- Download data from: https://www.aclweb.org/anthology/N19-1070/
+
 ### MSMARCO (Query Prediction from Clicked Documents)
 
 - Paper: https://arxiv.org/abs/2006.05324
