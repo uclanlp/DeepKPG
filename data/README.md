@@ -52,7 +52,7 @@ After the preprocessing script finishes, the will be three folders.
 ### LDKP
 
 - Paper: https://arxiv.org/pdf/2203.15349.pdf
-- Download data from: https://www.aclweb.org/anthology/N19-1070/
+- Download data from: https://huggingface.co/datasets/midas/ldkp3k and https://huggingface.co/datasets/midas/ldkp10k
 
 ### MSMARCO (Query Prediction from Clicked Documents)
 
