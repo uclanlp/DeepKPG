@@ -75,6 +75,30 @@ def load_data(filename, dataset_name):
                         'abstract': ex['abstract'],
                         'keyword': ';'.join(ex['keyphrases'])
                     }
+                elif 'ldkp' in dataset_name:
+                    title_txt = ""
+                    if "title" in ex["sections"]:
+                        title_idx = ex["sections"].index("title")
+                        ex["sections"].pop(title_idx)
+                        title_txt = ' '.join(ex["sec_text"].pop(title_idx))
+
+                    abstract_txt_list = [""]
+                    if "abstract" in ex["sections"]:
+                        abstract_idx = ex["sections"].index("abstract")
+                        ex["sections"].pop(abstract_idx)
+                        abstract_txt_list.append(' '.join(ex["sec_text"].pop(abstract_idx)))
+
+                    abstract_txt_list += [' '.join(x) for x in ex["sec_text"]]
+                    abstract_txt = ' '.join(abstract_txt_list).replace('Abstract-', '')
+                    
+                    ex = {
+                        'id': ex['id'],
+                        'title': title_txt,
+                        'abstract': abstract_txt,
+                        'keyword': ';'.join(ex['extractive_keyphrases']
+                                            + ex['abstractive_keyphrases'])
+                    }
+                    
                 else:
                     if 'id' not in ex:
                         ex['id'] = len(data)
@@ -164,7 +188,8 @@ if __name__ == '__main__':
         opt.valid = os.path.join(opt.data_dir, 'KPTimes.valid.jsonl')
         opt.test = os.path.join(opt.data_dir, 'KPTimes.test.jsonl')
 
-    if opt.dataset in ['kpbiomed-small', 'kpbiomed-medium', 'kpbiomed-large']:
+    if opt.dataset in ['kpbiomed-small', 'kpbiomed-medium', 'kpbiomed-large'] \
+       or 'ldkp' in opt.dataset:
         opt.train = os.path.join(opt.data_dir, 'train.jsonl')
         opt.valid = os.path.join(opt.data_dir, 'valid.jsonl')
         opt.test = os.path.join(opt.data_dir, 'test.jsonl')
