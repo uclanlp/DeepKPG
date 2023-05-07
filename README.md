@@ -109,7 +109,16 @@ After setting up the PyTorch environment as described in the steps above, you ca
 - `bash run_t5_large.sh` or `bash run_bart_large.sh`.
 
 ## SciBART
-Coming soon.
+We pre-train BART-base and BART-large from scratch using paper titles and abstracts from a scientific corpus [S2ORC](https://github.com/allenai/s2orc). The pre-training was done with fairseq and the model is converted to huggingface and released here - [uclanlp/scibart-base](https://huggingface.co/uclanlp/scibart-base) and [uclanlp/scibart-large](https://huggingface.co/uclanlp/scibart-base). 
+
+As we train a new vocabulary from scratch on the S2ORC corpus using sentencepiece, SciBart is incompatible with the original `BartTokenizer`. We are submitting a pull request to huggingface to include our new tokenizer. For now, to use SciBart, you can clone and install transformers from the branch https://github.com/xiaowu0162/transformers/tree/scibart-integration. Then, you may use the model as usual:
+
+```
+from transformers import BartForConditionalGeneration, AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained('uclanlp/scibart-large')
+model = BartForConditionalGeneration.from_pretrained('uclanlp/scibart-large')
+print(tokenizer.batch_decode(model.generate(**tokenizer('This is an example of a <mask> computer.', return_tensors='pt'))))
+```
 
 ## NewsBART
 We continue pre-train facebook's BART-base on the [realnews](https://github.com/rowanz/grover/tree/master/realnews) dataset without changing the vocabulary. More details regarding the pre-training can be found in our paper. The model is released on [huggingface model hub](https://huggingface.co/uclanlp/newsbart-base). Fine-tuning it for keyphrase generation is supported in `sequence_generation/seq2seq`.
