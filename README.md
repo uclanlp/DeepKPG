@@ -1,5 +1,8 @@
 # DeepKPG
 
+## News
+- [**2023/5**] We have released the weights of [SciBART](#scibart).
+
 ## Introduction
 We provide support for a range of Deep Keyphrase Generation and Extraction methods with Pre-trained Language Models (PLMs). This repository contains the following models and methods mentioned in the paper [Pre-trained Language Models for Keyphrase Generation: A Thorough Empirical Study](https://arxiv.org/abs/2212.10233). 
 
