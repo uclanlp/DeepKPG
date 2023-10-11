@@ -16,6 +16,8 @@ The methods and models we cover as follows
 - [Keyphrase Generation with sequence-to-sequence PLMs such as BART and T5](#keyphrase-generation-with-sequence-to-sequence-plms).
 - Code and checkpoints for in-domain PLMs: [SciBART](#scibart), [NewsBART](#newsbart), and [NewsBERT](#newsbert).
 
+For semantic-based evaluation, please refer to [KPEval](https://github.com/uclanlp/KPEval/).
+
 If you find this work helpful, please consider citing
 ```
 @article{https://doi.org/10.48550/arxiv.2212.10233,
