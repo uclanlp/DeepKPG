@@ -4,11 +4,14 @@
 - [**2023/5**] We have released the weights of [SciBART](#scibart).
 
 ## Introduction
-We provide support for a range of Deep Keyphrase Generation and Extraction methods with Pre-trained Language Models (PLMs). This repository contains the following models and methods mentioned in the paper [Pre-trained Language Models for Keyphrase Generation: A Thorough Empirical Study](https://arxiv.org/abs/2212.10233). 
+We provide support for a range of Deep Keyphrase Generation and Extraction methods with Pre-trained Language Models (PLMs). This repository contains the code for two papers:
+- [Rethinking Model Selection and Decoding for Keyphrase Generation with Pre-trained Sequence-to-Sequence Models](https://arxiv.org/abs/2310.06374)
+- [Pre-trained Language Models for Keyphrase Generation: A Thorough Empirical Study](https://arxiv.org/abs/2212.10233) 
 
+The methods and models we cover as follows
 - [Keyphrase Extraction with BERT-like encoder-only PLMs with or without CRF](#keyphrase-extraction-via-sequence-tagging).
 - [Keyphrase Generation with encoder-only PLMs following the BERT2BERT paradigm](#bert2bert).
-- [Keyphrase Generation with encoder-only PLMs following the UniLM (attention mask manipulation) paradigm](#unilm). 
+- [Keyphrase Generation with encoder-only PLMs following the UniLM (prefix-LM fine-tuning) paradigm](#unilm). 
 - [Keyphrase Generation with sequence-to-sequence PLMs such as BART and T5](#keyphrase-generation-with-sequence-to-sequence-plms).
 - Code and checkpoints for in-domain PLMs: [SciBART](#scibart), [NewsBART](#newsbart), and [NewsBERT](#newsbert).
 
