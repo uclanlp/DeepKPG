@@ -1,7 +1,7 @@
 # DeepKPG
 
 ## News
--[**2024/2**] [On Leveraging Encoder-only Pre-trained Language Models for Effective Keyphrase Generation](https://arxiv.org/abs/2402.14052) is accepted to LREC-COLING 2024.
+- [**2024/2**] [On Leveraging Encoder-only Pre-trained Language Models for Effective Keyphrase Generation](https://arxiv.org/abs/2402.14052) is accepted to LREC-COLING 2024.
 - [**2023/10**] [Rethinking Model Selection and Decoding for Keyphrase Generation with Pre-trained Sequence-to-Sequence Models](https://arxiv.org/abs/2310.06374) is accepted to EMNLP 2023.
 - [**2023/5**] We have released the weights of [SciBART](#scibart).
 
